@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="asdf">
+    <div class="picker" id="picker">Click to start</div>
+    <div class="counter" id="counter">Yes: 0, No: 0</div>
+    <button class="reset-button" onclick="reset()">Reset</button>
+  </div>
+    <!-- Optional JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script>
+      var picker = document.getElementById('picker');
+    var counter = document.getElementById('counter');
+    var yesCount = 0;
+    var noCount = 0;
+
+    function reset() {
+      yesCount = 0;
+      noCount = 0;
+      updateCounter();
+    }
+
+    function updateCounter() {
+      counter.textContent = 'Yes: ' + yesCount + ', No: ' + noCount;
+    }
+
+    picker.addEventListener('click', function() {
+      var options = ['yes', 'no', 'maybe'];
+      var randomIndex = Math.floor(Math.random() * options.length);
+      var selectedOption = options[randomIndex];
+      picker.textContent = selectedOption.toUpperCase();
+
+      picker.classList.remove('yes', 'no', 'maybe');
+    picker.classList.add(selectedOption);
+
+      if (selectedOption === 'yes') {
+        yesCount++;
+      } else if (selectedOption === 'no') {
+        noCount++;
+      }
+
+      updateCounter();
+    });
+    </script>
+  </body>
+</html>

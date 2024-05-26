@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #aaa;
+}
+body .asdf {
+  background: #ddd;
+  padding: 40px 80px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 10px #535353, 0px 0px 10px 10px #535353;
+}
+body .asdf .picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  font-size: 2em;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+body .asdf .counter {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-top: 10px;
+  padding: 10px;
+  transition: 0.4s ease-in-out;
+}
+body .asdf .reset-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 45px;
+  font-size: 1.2em;
+  background-color: #252729;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+body .asdf .reset-button:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+body div .yes {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+body div .no {
+  background-color: #F44336;
+  color: #fff;
+}
+
+body div .maybe {
+  background-color: #FFC107;
+  color: #000;
+}/*# sourceMappingURL=index.css.map */
